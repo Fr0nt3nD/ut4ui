@@ -1,1 +1,498 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UT4 menu UI prototype</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="scripts/vendors/jquery-2.1.1.min.js"></script>
+	<script src="scripts/vendors/jquery-ui.min.js"></script>
+</head>
+<body>
+	<nav>
+		<ul class="menu-top">
+			<li>
+				<a href="#0" class="item-toplevel effeckt-modal-button" data-help="Select an action" data-effeckt-type="from-below" data-effeckt-target="#popup_play_multiplayer">Game</a>
+				<div class="submenu">
+					<div class="shortcuts"></div>
+					<div class="options">
+						<a class="option effeckt-modal-button" data-help="Begin a new campaign or continue an old one" data-effeckt-type="from-below" data-effeckt-target="#popup_play_campaign">Campaign</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Play a local game with bots" data-effeckt-type="from-below" data-effeckt-target="#popup_play_locally">Local game</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Play via Internet or Local area network" data-effeckt-type="from-below" data-effeckt-target="#popup_play_multiplayer">Multiplayer</a><!--
+					 --><a class="option" data-help="Close the game">Quit</a>
+					</div>
+					<div class="help"></div>
+				</div>
+			</li><!--
+		 --><li>
+				<a class="item-toplevel effeckt-modal-button" href="#0" data-help="Select type of the settings you want to change" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_player">Settings</a>
+				<div class="submenu">
+					<div class="shortcuts"></div>
+					<div class="options">
+						<a class="option effeckt-modal-button" data-help="Change player name, skin, model etc" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_player">Player</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Tweak mouse and keyboard settings" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_control">Controls</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Set up screen resolution, quality of textures etc" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_video">Video</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Configure the volume, sound quality, taunts etc" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_audio">Audio</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Settings for User interface: HUD, notifications etc" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_ui">UI</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Enhance your experience during an online games by setting up correct type of connection" data-effeckt-type="from-below" data-effeckt-target="#popup_settings_notifications">Notifications</a>
+					</div>
+					<div class="help"></div>
+				</div>
+			</li><!--
+		 --><li>
+				<a class="item-toplevel effeckt-modal-button" href="#0" data-help="Choose the type of content you want to get" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Content</a>
+				<div class="submenu">
+					<div class="shortcuts"></div>
+					<div class="options">
+						<a class="option effeckt-modal-button" data-help="Download new maps" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Maps</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Install modifications that significantly change the game (for ex. new gametype)" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Mods</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Get extensions that changes some aspect of the game" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Mutators</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Download new player models" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Models</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Bored with a custom player skins? Check the custom content form the community!" data-effeckt-type="from-below" data-effeckt-target="#popup_content">Skins</a>
+					</div>
+					<div class="help"></div>
+				</div>
+			</li><!--
+		 --><li>
+				<a class="item-toplevel effeckt-modal-button" href="#0" data-help="Select the chapter you are interested in" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Community</a>
+				<div class="submenu">
+					<div class="shortcuts"></div>
+					<div class="options">
+						<a class="option effeckt-modal-button" data-help="Take part into ladders to improve your skill" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Ladders</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Watch and sigh up for upcoming competitions" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Championships</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Stay on touch and follow the latest events in the Unreal Universe" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Events</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Create a new clan and or join an existing one" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Clans</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Watch own recorded demos or find demos from the Pros" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Demos</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Add a friend, send an invitation to the game or chat" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Friends</a><!--
+					 --><a class="option effeckt-modal-button" data-help="See players rating, achivements, weapon stats etc" data-effeckt-type="from-below" data-effeckt-target="#popup_community">Stats</a>
+					</div>
+					<div class="help"></div>
+				</div>
+			</li><!--
+		 --><li>
+				<a class="item-toplevel effeckt-modal-button" href="#0" data-help="Select a help topic" data-effeckt-type="from-below" data-effeckt-target="#popup_help">Help</a>
+				<div class="submenu">
+					<div class="shortcuts"></div>
+					<div class="options">
+						<a class="option effeckt-modal-button" data-help="Playing for the first time? Go through training levels and explore the basics of the game." data-effeckt-type="from-below" data-effeckt-target="#popup_help">Game tutorial</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Useful video from players and creators of content for the Unreal Universe" data-effeckt-type="from-below" data-effeckt-target="#popup_help">Free Video on Demand</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Check for updates for Unreal Tournament and additional content (maps, mods etc)" data-effeckt-type="from-below" data-effeckt-target="#popup_help">Check for updates</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Links to resources on Unreal turnament" data-effeckt-type="from-below" data-effeckt-target="#popup_help">Resources</a><!--
+					 --><a class="option effeckt-modal-button" data-help="List of the people who designed, programmed, and produced an Unreal Tournament" data-effeckt-type="from-below" data-effeckt-target="#popup_help">Credits</a><!--
+					 --><a class="option effeckt-modal-button" data-help="Information about the game" data-effeckt-type="from-below" data-effeckt-target="#popup_help">About</a>
+					</div>
+					<div class="help"></div>
+				</div>
+			</li>
+		</ul>
+		<a href="#0" class="soundtoggle" id="soundtoggle">
+			<span class="sound-enabled">Disable sound</span>
+			<span class="sound-disabled">Enable sound</span>
+		</a>
+		<a href="#0" id="fullscreen">Fullscreen</a>
+		<a href="#0" id="cancel-fullscreen">Back to normal mode</a>
+	</nav>
+
+	<div class="helpers">
+		<audio controls preload="auto">
+			<source src="sounds/modal_open.ogg" controls></source>
+			<source src="sounds/modal_open.mp3" controls></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+	</div>
+
+	<img  class="logo" src="images/ut_logo.png" alt="New UT logo goes here (fastly done version for now)">
+
+<!-- 	Controls
+	UI
+	Notifications -->
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_play_campaign">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Start/Join a campaing</h3>
+			<div class="effeckt-modal-content">
+				content
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_play_locally">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Start a new local game</h3>
+			<div class="effeckt-modal-content">
+				content
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_play_multiplayer">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Join to a multiplayer game</h3>
+			<div class="effeckt-modal-content">
+				content
+			</div>
+		</div>
+	</div>
+
+
+	Weapon priority [sortable list]
+	Free for all color [color picker]
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_player">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Player Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="player_name">Player name</label><!--
+					 --><div class="element">
+							<input type="text" name="player_name" id="player_name" value="Player">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="player_model">Player model</label><!--
+					 --><div class="element">
+							<select name="player_model" id="player_model" data-plugin="select2" style="width: 100%">
+								<option value="1">Skaarj</option>
+								<option value="2">Nali</option>
+								<option value="3">Nali war cow</option>
+								<option value="4">Robot</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="force_model">Force model</label><!--
+					 --><div class="element">
+							<input type="checkbox" name="force_model" id="force_model">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="weapon_switch_on_pickup">Weapon switch on pickup</label>
+						<div class="element">
+							<input type="checkbox" name="weapon_switch_on_pickup" id="weapon_switch_on_pickup">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="force_model">Weapon priority</label><!--
+					 --><div class="element">
+							<ul class="weapon-priority">
+								<li><a>Translocator</a></li>
+								<li><a>Impact Hammer</a></li>
+								<li><a>Chainsaw</a></li>
+								<li><a>Enforcer</a></li>
+								<li><a>Bio Rifle</a></li>
+								<li><a>Shock Rifle</a></li>
+								<li><a>Pulse Gun</a></li>
+								<li><a>Ripper</a></li>
+								<li><a>Minigun</a></li>
+								<li><a>Flak Cannon</a></li>
+								<li><a>Rocket Launcher</a></li>
+								<li><a>Sniper Rifle</a></li>
+								<li><a>Superweapon</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="mouse_sensivity">Mouse sensivity</label><!--
+					 --><div class="element">
+							<input type="text" name="mouse_sensivity" id="mouse_sensivity" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="weapon_bob">Weapon bob</label>
+						<div class="element">
+							<input type="text" name="weapon_bob" id="weapon_bob" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="view_bob">View bob</label>
+						<div class="element">
+							<input type="text" name="view_bob" id="view_bob" data-plugin="jslider">
+						</div>
+					</div>
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_video">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Video Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="scr_res">Screen resolution</label>
+						<div class="element">
+							<select name="scr_res" id="scr_res" data-plugin="select2" style="width: 100%">
+								<option value="1">1920x1200</option>
+								<option value="1">1600x1200</option>
+								<option value="1">1280x1024</option>
+								<option value="1">1024x768</option>
+								<option value="1">800x600</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="texture_detail">Texture Detail</label>
+						<div class="element">
+							<select name="texture_detail" id="texture_detail" data-plugin="select2" style="width: 100%">
+								<option value="1">High</option>
+								<option value="1">Medium</option>
+								<option value="1">Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="shadow_quality">Shadow quality</label>
+						<div class="element">
+							<select name="shadow_quality" id="shadow_quality" data-plugin="select2" style="width: 100%">
+								<option value="1">High</option>
+								<option value="1">Medium</option>
+								<option value="1">Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="effects_quality">Effects quality</label>
+						<div class="element">
+							<select name="effects_quality" id="effects_quality" data-plugin="select2" style="width: 100%">
+								<option value="1">High</option>
+								<option value="1">Medium</option>
+								<option value="1">Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="post_processing">Post-processing</label>
+						<div class="element">
+							<select name="post_processing" id="post_processing" data-plugin="select2" style="width: 100%">
+								<option value="1">High</option>
+								<option value="1">Medium</option>
+								<option value="1">Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="fov">Field of view</label>
+						<div class="element">
+							<input type="text" name="fov" id="fov" data-plugin="jslider">
+						</div>
+					</div>
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_audio">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Audio Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="master_sound_volume">Master sound volume</label>
+						<div class="element">
+							<input type="text" name="master_sound_volume" id="master_sound_volume" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="music_volume">Music volume</label>
+						<div class="element">
+							<input type="text" name="music_volume" id="music_volume" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="effects_volume">Effects volume</label>
+						<div class="element">
+							<input type="text" name="effects_volume" id="effects_volume" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="voice_volume">Voice volume</label>
+						<div class="element">
+							<input type="text" name="voice_volume" id="voice_volume" data-plugin="jslider">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="decals_lifetime">Decals lifetime</label>
+						<div class="element">
+							<input type="text" name="decals_lifetime" id="decals_lifetime" data-plugin="jslider">
+						</div>
+					</div>
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_control">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Control Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="">Common notifications while playing</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_ui">
+		<div class="effeckt-content effeckt-modal">
+			<h3>User Interface Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="">Common notifications while playing</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_settings_notifications">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Notification Settings</h3>
+			<div class="effeckt-modal-content">
+				<form action="">
+					<div class="form-row">
+						<label for="">Common notifications while playing</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify on my subscriptions while playing</label>
+						<div class="element"><input type="checkbox" name="" id="" checked></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About News</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About Matches</label>
+						<div class="element"><input type="checkbox" name="" id="" checked></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About Content releases</label>
+						<div class="element"><input type="checkbox" name="" id="" checked></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About Core Updates</label>
+						<div class="element"><input type="checkbox" name="" id="" checked></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About friends invitations</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+					<div class="form-row">
+						<label for="">Notify About invitations to join a clan</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+					<div class="form-row">
+						<label for="">Disable All Notifications</label>
+						<div class="element"><input type="checkbox" name="" id=""></div>
+					</div>
+				</form>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Save</a>
+					<a href="#0" class="effeckt-modal-close">Cancel</a>
+					<a href="#0">Reset</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_content">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Additional content</h3>
+			<div class="effeckt-modal-content">
+				<p>Mockup is not ready yet but here should be really big popup box with a catalogue of extra content (maps/mods/skins etc) like google play / app store.</p>
+				<p>Key features in my opinion is the ability to quickly and easily download/install. The best scenario is <b>Click</b> -> <b>Progress bar</b> -> <b>proposal of quick start</b> to check/play when installed/downloaded</p>
+				<p>Here in my opinion should be also the section for content creators to add/manage stuff. The content creators should have the possibility to update their packages (for example a map after fixing ome glitches). Updates are distributed to the players via notifications system and stay available through 'help' > 'Check for updates' section</p>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_community">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Community</h3>
+			<div class="effeckt-modal-content">
+				<p>Popups for this section's are not ready, but here some explanations of my vision:</p>
+				<ul>
+					<li><b>Ladders:</b> list of ladders, rankings, join a ladder, challenge a player</li>
+					<li><b>Championships:</b> List of championships (with info, dates, rules etc), possibility to view the tournament grid and sign up to upcoming championship</li>
+					<li><b>Events:</b> The full list of community events (top matches, news from Epic, meetings, upcoming updates etc) filtered by tags. Here the user can subscribe to notifications on some event.</li>
+					<li><b>Clans:</b> list of clans, create a new clan, join to a clan, clan details (members, logo, website, tropheys etc), send an invitation for player to join, ask for permission to join the clan</li>
+					<li><b>Demos:</b> Easy access to the recorded demos + maybe the possibility to watch demos from other's (popular demos)</li>
+					<li><b>People:</b> Add a friend, list of friends with the posibility to start a chat with one of them</li>
+					<li><b>Stats:</b> Statistics table as always. On the other hand stats can be moved to a 'People' section. Then the data will be available on the player page (like in social networks)</li>
+				</ul>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="effeckt-wrap effeckt-modal-wrap" id="popup_help">
+		<div class="effeckt-content effeckt-modal">
+			<h3>Help</h3>
+			<div class="effeckt-modal-content">
+				<p>Popup for help are also not ready yet. Some thoughts:</p>
+				<ul>
+					<li><b>Game tutorial:</b> like in UT99, step-by-step in-game instructions to the newbies.</li>
+					<li><b>Free Video on Demand:</b> community-generated videos (tricks, tactics, map overviews, recorded streams, video reports on past events etc). Players can add video hosted on popular video hostings by a link, rate, report old links. Can require premoderation :/</li>
+					<li><b>Check for updates:</b> Would be cool if the game will be able to do self-update, as web browsers do. Would be even cooler if the installed content will be also auto-updateable (author of mutator, for ex. utcomp, has made a new version - all players that installed it received a notifiaction with the proposition to do quick update). That will make the life of players a lot easier and remove the problem of version mismatch</li>
+					<li><b>Resources:</b> List of community resources with the possibility to add new resource and rate the existing ones</li>
+				</ul>
+				<div class="controls">
+					<a href="#0" class="effeckt-modal-close">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="notification" id="section_notification">
+		<div class="notification-content">The game update is available. Install it?</div>
+		<div class="controls">
+			<a href="#0" class="effeckt-button">Yes</a>
+			<a href="#0" class="effeckt-button">No</a>
+		</div>
+	</section>
+	<script src="css/vendors/effeckt/js/core.js"></script>
+	<script src="css/vendors/effeckt/js/modules/modal.js"></script>
+	<script src="css/vendors/effeckt/js/modules/positional-modals.js"></script>
+	<script src="js/vendors/jquery.fullscreen-min.js"></script>
+	<script src="scripts/scripts.js"></script>
+</body>
+</html>
