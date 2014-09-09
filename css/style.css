@@ -7719,6 +7719,20 @@ a {
 .form-row .element textarea {
   width: 100%;
 }
+.form-row.col-3 .element {
+  width: 23%;
+  margin-right: 2%;
+}
+.form-row.col-3 .element:last-child {
+  margin-right: 0;
+}
+.form-row.col-3 .element a {
+  display: block;
+  text-align: center;
+  padding: 3px;
+  text-transform: none;
+  font-size: 12px;
+}
 input[type="text"],
 select {
   height: 26px;
@@ -7794,6 +7808,9 @@ select {
 }
 #popup_settings_player {
   min-width: 460px;
+}
+#popup_settings_control {
+  min-width: 620px;
 }
 .ui-slider {
   background: #363f47;
@@ -7907,14 +7924,14 @@ a.effeckt-button {
   overflow: hidden;
 }
 .soundtoggle .sound-enabled {
-  max-width: 100px;
+  max-width: 0;
 }
 .soundtoggle .sound-disabled {
-  max-width: 0;
-}
-.soundtoggle.off .sound-enabled {
-  max-width: 0;
-}
-.soundtoggle.off .sound-disabled {
   max-width: 100px;
+}
+.soundtoggle.on .sound-enabled {
+  max-width: 100px;
+}
+.soundtoggle.on .sound-disabled {
+  max-width: 0;
 }

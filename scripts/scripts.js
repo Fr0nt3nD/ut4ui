@@ -9,7 +9,7 @@ function beep () {
 	};
 }
 
-var soundOn = true;
+var soundOn = false;
 
 $(document).ready(function() {
 	// $('.menu-top a').mouseenter(beep);
@@ -38,7 +38,7 @@ $(document).ready(function() {
 		};
 	})
 	$('#soundtoggle').on('click',function() {
-		$(this).toggleClass('off');
+		$(this).toggleClass('on');
 		soundOn = (soundOn) ? false : true;
 	});
 

@@ -164,7 +164,20 @@ a {
 			width: 100%;
 		}
 	}
-
+	&.col-3 {
+		.element {
+			width: 23%;
+			margin-right: 2%;
+			&:last-child { margin-right: 0; }
+			a {
+				display: block;
+				text-align: center;
+				padding: 3px;
+				text-transform: none;
+				font-size: 12px;
+			}
+		}
+	}
 }
 
 input[type="text"], select {
@@ -230,9 +243,8 @@ input[type="text"], select {
 .effeckt-modal-wrap {
 	max-width: 520px;
 }
-#popup_settings_player {
-	min-width: 460px;
-}
+#popup_settings_player  { min-width: 460px; }
+#popup_settings_control { min-width: 620px; }
 
 
 // ************************* UI slider
@@ -346,10 +358,10 @@ a.effeckt-button {
 		.transition(@transition);
 		overflow: hidden;
 	}
-	.sound-enabled  { max-width: 100px; }
-	.sound-disabled { max-width: 0; }
-	&.off {
-		.sound-enabled  { max-width: 0; }
-		.sound-disabled { max-width: 100px; }
+	.sound-enabled  { max-width: 0; }
+	.sound-disabled { max-width: 100px; }
+	&.on {
+		.sound-enabled  { max-width: 100px; }
+		.sound-disabled { max-width: 0; }
 	}
 }
